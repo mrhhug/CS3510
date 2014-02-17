@@ -1,0 +1,89 @@
+﻿SSHslide0
+	TITLE:
+		SSH (Secure Shell aka Secure Socket Shell) - is a network protocol to establish a secure channel between two computers for data exchange
+	TEXT:
+		A sample terminal SSH logon - GUI clients also available.
+	IMAGE image0.png
+	
+SSHslide1:
+	TITLE:
+		SSH uses a client server model - client program is needed by accesor, daemon service is need by accessee
+	TEXT:
+		Client program can connect to one daemon at a time, daemon can serve many clients simultaneously
+			BULLET: Mutlithreaded operating system could run multiple client programs simultaneously
+		SSH daemon, by default, listens on the standard TCP port 22 - the port is often changed as a security measure
+			BULLET: SSH daemon listens only on the configured ports 
+				SUBBULLET: all other ports ignored
+		establishing a SSH connections requires:
+			BULLET: Host
+			BULLET: Host port
+			BULLET: Authentication
+
+SSHslide2:
+	TITLE:
+		SSH can also be used for secure tunneling and file transfers
+	TEXT:
+		Tunneling
+			BULLET: Encapsulation
+				SUBBULLET: TCP port forwarding
+				SUBULLET: X11 connections
+					SUBSUBBULLET: Remote GUI sessions
+{IMAGE image1.png (possibly insert image of remote GUI session - will be image1.png)}
+		File Transfers
+			BULLET: SCP (Secure copy)
+SSHslide3
+	TITLE:
+		SSH is a replacement for telnet and rlogin - SSH's major advantage is that SSH does not authenticate in plaintext
+	TEXT:
+		The proliferation of public networks necessitated the evolution of SSH\n
+		SSH security is implemented through ciphers\n
+		SSH uses public key cryptography for authentication
+		Authentication ciphers
+			BULLET: DSA or RSA
+		encryption ciphers
+			BULLET:	3DES
+			BULLET:	Blowfish
+			BULLET:	Twofish	
+			BULLET:	Arcfour
+			BULLET:	Cast128	
+				
+SSHslideN
+	TITLE:
+		Authentication - public key authentication
+	  SUBTITLE
+	  		Typing passwords to establish every connection is optional with SSH
+	TEXT:
+		SSH can automatically generate a one time key pair or permanent key pairs can be used
+		Public key authentication happens in two parts, a public key and a private key
+			BULLET: automatically generated key pairs will be used once and require the user to enter a password
+			BULLET: permanent keys are stored on the accesser and accessee's computers and do not require the user enter a password
+				SUBBULLET: accesser stores private key
+				SUBBULLET: accessee stores public key
+		{redundant to really hit the point home} SSH always uses public key authentication, using a a permanent key pair will bypass passwords. 
+				
+SSHslideN+1(optional for time padding)
+	TITLE:
+		Encryption ciphers
+	TEXT:
+		3DES
+			BULLET: symmetric-key block cipher
+			BULLET: key bundle
+		Blowfish
+			BULLET: symmetric-key block cipher
+			BULLET: 64-bit block size
+		Twofish
+			BULLET: symmetric-key block cipher
+			BULLET: Successors to Blowfish
+			BULLET: 128 bits block size
+		Arcfour
+			BULLET: stream cipher
+			BULLET: pseudorandom stream of bits
+		Cast128
+			BULLET: symmetric-key block cipher
+			BULLET: 64-bit block size
+			
+references
+http://linux.die.net/man/1/ssh
+http://datatracker.ietf.org/wg/secsh/
+(not sure if this is credible)
+a refence for cryptography

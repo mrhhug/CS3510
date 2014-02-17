@@ -1,4 +1,4 @@
-SSH (Secure Shell aka Secure Socket Shell) - is a network protocol that allows data to be exchanged over a secure channel between two computers.
+SSH (Secure Shell aka Secure Socket Shell) - is a network protocol to establish a secure channel between two computers for data exchange
 SSH strive to create confidential connections across the Net
 
 	replaces telnet and rlongin - SSH does not send passwords in plaintext
