@@ -1,0 +1,14 @@
+Slide 1)Advantages
+		better use of system resources
+		parallelize tasks
+		enhanced performance on multi-processor/multi-core machines
+		cache sharing
+Slide 2)Advantages
+		Modern hardware is designed for a multi-threaded environment
+		Simple devices such as phone are multi-cored today
+		<picture of something>
+Slide 3)Advantages
+		Multi-threading can eliminate bottlenecks
+		Network requests are often given own thread
+			a timeout on the network will not lock entire machine
+		Daemons often spawn multiple threads to handle simultaneous communications
